@@ -1,0 +1,12 @@
+Build me a personal website. With a minimalsitic UI, almost
+  like text is in the center of the page, not many boxes or anything fancy,
+  just a website that looks like its about content. It should also have the
+  capability of a workflow that a markdown if added into a file should
+  automatically be converted to a webpage. Things should be in the center
+  looking minimal. Website should be easy to look at so colour pallete should
+  be not contain harsh colours at all. Colour friendly or black or white.
+  Should have a page for blogs and blogs can be added in markdown. More
+  information about me is available in
+  Data_Engineer_Siddhesh_Latest_CV_All_Ed.pdf . Should be auto-deployable with
+  minimal workflow, language is not of constraint, but should be refreshed and
+  built without taking too long.

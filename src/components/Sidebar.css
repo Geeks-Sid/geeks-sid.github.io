@@ -1,0 +1,111 @@
+.sidebar {
+  width: 180px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+  font-size: 0.9rem;
+}
+
+.terminal-prompt {
+  color: var(--muted-text);
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: 0.85em;
+  opacity: 0.7;
+}
+
+.subnav-section {
+  margin-bottom: 2rem;
+}
+
+.sidebar-subnav {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  border-left: 1px dashed var(--border-color);
+  padding-left: 0.5rem;
+  margin-left: 0.2rem;
+}
+
+.sidebar-subnav li {
+  margin-bottom: 0.5rem;
+}
+
+.year-link {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.9em;
+  color: var(--muted-text);
+  cursor: pointer;
+  transition: color 0.2s;
+  font-family: inherit;
+  text-align: left;
+}
+
+.year-link:hover {
+  color: var(--text-color);
+}
+
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85em;
+  margin-top: 2rem;
+}
+
+.cv-link {
+  font-weight: 600;
+  color: var(--text-color) !important;
+}
+
+.sidebar-footer a {
+  color: var(--muted-text);
+  transition: all 0.2s;
+  padding: 0.1rem 0.3rem;
+  margin-left: -0.3rem;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.sidebar-footer a:hover {
+  color: var(--text-color);
+  background: rgba(128, 128, 128, 0.1);
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 100%;
+    position: static;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .sidebar-footer {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .terminal-prompt {
+    text-align: center;
+  }
+  
+  .sidebar-subnav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    border-left: none;
+    padding-left: 0;
+  }
+  
+  .year-link {
+    /* Remove the tree branch styling on mobile */
+    font-size: 1em;
+  }
+}

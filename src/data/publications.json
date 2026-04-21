@@ -1,0 +1,83 @@
+[
+  {
+    "id": "thakur-2025-optimization",
+    "type": "journal",
+    "year": 2025,
+    "title": "Optimization of deep learning models for inference in low resource environments",
+    "authors": "S. Thakur, S. Pati, B. Baheti, M. Bilello, S. Bakas",
+    "venue": "Computers in Biology and Medicine",
+    "doi": "https://doi.org/10.1016/j.compbiomed.2024.109151"
+  },
+  {
+    "id": "zenk-2025-fets",
+    "type": "journal",
+    "year": 2025,
+    "title": "Towards face decentralized benchmarking of healthcare AI algorithms with the Federated Tumor Segmentation (FeTS) challenge",
+    "authors": "M. Zenk, U. Baid, S. Pati, M. J. Sheller, G. A. Reina, S. Thakur, et al.",
+    "venue": "Nature Communications"
+  },
+  {
+    "id": "park-2025-skull",
+    "type": "preprint",
+    "year": 2025,
+    "title": "Skull stripping with purely synthetic data",
+    "authors": "J. S. Park, J. Ha, S. Thakur, U. Baid, M. J. Sheller, S. Pati, S. Bakas",
+    "venue": "arXiv preprint arXiv:2505.07159"
+  },
+  {
+    "id": "baid-2024-til",
+    "type": "conference",
+    "year": 2024,
+    "title": "Pan-Cancer Tumor Infiltrating Lymphocyte Detection based on Federated Learning",
+    "authors": "U. Baid, S. Pati, S. Thakur, M. J. Sheller, G. A. Reina, S. Bakas",
+    "venue": "IEEE International Conference on Big Data (BigData)"
+  },
+  {
+    "id": "thakur-2024-brats",
+    "type": "abstract",
+    "year": 2024,
+    "title": "BRATS-PATH: Assessing heterogeneous pathologic regions in glioblastoma",
+    "authors": "S. Thakur, S. Faghani, M. Moassefi, S. Pati, S. Bakas",
+    "venue": "Neuro-Oncology"
+  },
+  {
+    "id": "pati-2023-gandlf",
+    "type": "journal",
+    "year": 2023,
+    "title": "GaNDLF: the generally nuanced deep learning framework for scalable end-to-end clinical workflows",
+    "authors": "S. Pati, S. Thakur, M. J. Sheller, G. A. Reina, B. Baheti, et al.",
+    "venue": "Communications Engineering"
+  },
+  {
+    "id": "thakur-2022-ms",
+    "type": "journal",
+    "year": 2022,
+    "title": "Clinically Deployed Computational Assessment of Multiple Sclerosis Lesions",
+    "authors": "S. Thakur, M. Schindler, M. Bilello, S. Bakas",
+    "venue": "Frontiers in Medicine"
+  },
+  {
+    "id": "thakur-2021-optim-conf",
+    "type": "conference",
+    "year": 2021,
+    "title": "Optimization of deep learning based brain extraction in MRI for low resource environments",
+    "authors": "S. Thakur, S. Pati, B. Baheti, M. Bilello, S. Bakas",
+    "venue": "International MICCAI Brainlesion Workshop"
+  },
+  {
+    "id": "thakur-2020-brain-extraction",
+    "type": "journal",
+    "year": 2020,
+    "title": "Brain extraction on MRI scans in presence of diffuse glioma: Multi-institutional performance evaluation",
+    "authors": "S. Thakur, J. Doshi, S. Pati, S. Thakur, M. Bilello, S. Bakas",
+    "venue": "Neuroimage"
+  },
+  {
+    "id": "bhalerao-2019-brain-tumor",
+    "type": "conference",
+    "year": 2019,
+    "title": "Brain tumor segmentation based on 3D residual U-Net",
+    "authors": "M. Bhalerao, S. Thakur",
+    "venue": "International MICCAI Brainlesion Workshop"
+  }
+]
