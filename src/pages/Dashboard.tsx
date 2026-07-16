@@ -34,7 +34,7 @@ const SkillBar: React.FC<{ label: string; percentage: number }> = ({ label, perc
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
+        if (entries && entries.length > 0 && entries[0].isIntersecting) {
           let current = 0;
           const interval = setInterval(() => {
             if (current < percentage) {

@@ -13,7 +13,7 @@ export const TerminalCommand: React.FC<TerminalCommandProps> = ({ prefix = "$", 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        if (entries[0].isIntersecting) {
+        if (entries && entries.length > 0 && entries[0].isIntersecting) {
           setIsStarted(true);
           observer.disconnect();
         }
