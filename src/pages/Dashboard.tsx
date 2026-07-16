@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useSEO } from '../hooks/useSEO';
 import { useGitHubStats } from '../hooks/useGitHubStats';
+import TerminalCommand from '../components/TerminalCommand';
 import './Dashboard.css';
 
 interface TerminalWindowProps {
@@ -26,10 +27,58 @@ const TerminalWindow: React.FC<TerminalWindowProps> = ({ title, children }) => {
   );
 };
 
-const Dashboard: React.FC = () => {
+const SkillBar: React.FC<{ label: string; percentage: number }> = ({ label, percentage }) => {
+  const [width, setWidth] = useState(0);
+  const barRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          let current = 0;
+          const interval = setInterval(() => {
+            if (current < percentage) {
+              current += 2;
+              setWidth(Math.min(current, percentage));
+            } else {
+              clearInterval(interval);
+            }
+          }, 15);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (barRef.current) {
+      observer.observe(barRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [percentage]);
+
+  const filledCount = Math.round((width / 100) * 20);
+  const emptyCount = 20 - filledCount;
+  const barText = '#'.repeat(filledCount) + '-'.repeat(emptyCount);
+
+  return (
+    <div className="stack-item" ref={barRef} style={{ marginBottom: '0.75rem' }}>
+      <div className="stack-label" style={{ fontFamily: 'monospace' }}>
+        {label.padEnd(13)} [{barText}] {Math.round(width)}%
+      </div>
+    </div>
+  );
+};
+
+interface DashboardProps {
+  isSection?: boolean;
+}
+
+const Dashboard: React.FC<DashboardProps> = ({ isSection = false }) => {
   useSEO({
     title: 'sid@system-status:~',
-    description: 'Technical status and professional overview of Siddhesh Thakur.'
+    description: 'Technical status and professional overview of Siddhesh Thakur.',
+    disabled: isSection
   });
 
   const { repos, events, loading, error } = useGitHubStats('geeks-sid');
@@ -77,13 +126,13 @@ const Dashboard: React.FC = () => {
       <div className="dashboard-grid">
         <TerminalWindow title="git_activity">
           <div className="git-activity">
-            <span className="terminal-prompt">$ fetch --latest activity</span>
+            <TerminalCommand command="fetch --latest activity" />
             {loading ? (
-              <p className="loading-text">Loading remote data...</p>
+              <p className="loading-text" style={{ marginTop: '1rem' }}>Loading remote data...</p>
             ) : error ? (
-              <p className="error-text">Error: {error}</p>
+              <p className="error-text" style={{ marginTop: '1rem' }}>Error: {error}</p>
             ) : (
-              <ul className="activity-list">
+              <ul className="activity-list" style={{ marginTop: '1rem' }}>
                 {events.slice(0, 5).map(event => (
                   <li key={event.id} className="activity-item">
                     <span className="event-type">[{event.type.replace('Event', '')}]</span>
@@ -100,18 +149,10 @@ const Dashboard: React.FC = () => {
 
         <TerminalWindow title="stack_utilization">
           <div className="stack-bars">
-            <div className="stack-item">
-              <div className="stack-label">PyTorch/DL [################----] 80%</div>
-            </div>
-            <div className="stack-item">
-              <div className="stack-label">Data Eng/SQL [##################--] 90%</div>
-            </div>
-            <div className="stack-item">
-              <div className="stack-label">LLMs/Agents  [##############------] 70%</div>
-            </div>
-            <div className="stack-item">
-              <div className="stack-label">Docker/Cloud [############--------] 60%</div>
-            </div>
+            <SkillBar label="PyTorch/DL" percentage={80} />
+            <SkillBar label="Data Eng/SQL" percentage={90} />
+            <SkillBar label="LLMs/Agents" percentage={70} />
+            <SkillBar label="Docker/Cloud" percentage={60} />
           </div>
         </TerminalWindow>
       </div>

@@ -1,10 +1,15 @@
 import React from 'react';
 import { useSEO } from '../hooks/useSEO';
 
-const Achievements: React.FC = () => {
+interface AchievementsProps {
+  isSection?: boolean;
+}
+
+const Achievements: React.FC<AchievementsProps> = ({ isSection = false }) => {
   useSEO({
     title: 'sid@achievements:~',
-    description: 'Awards and achievements of Siddhesh Thakur in the field of AI and medical imaging.'
+    description: 'Awards and achievements of Siddhesh Thakur in the field of AI and medical imaging.',
+    disabled: isSection
   });
   return (
     <section>

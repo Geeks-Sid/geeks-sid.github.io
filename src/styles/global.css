@@ -116,3 +116,94 @@ code {
   border-radius: 3px;
   font-size: 0.9em;
 }
+
+/* Home Page Single Scroll Layout */
+.home-scroll-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.home-section-wrapper {
+  padding: 1rem;
+  scroll-margin-top: 6.5rem; /* Offsets sticky top nav header during scroll-to-element */
+  transition: background-color 0.5s ease, opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  border-radius: 4px;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(25px);
+  will-change: transform, opacity;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px dashed var(--border-color);
+  margin: 1rem 0;
+}
+
+/* Highlight flash animation when navigating from search */
+@keyframes flash-highlight {
+  0% {
+    background-color: rgba(94, 168, 255, 0.2);
+    box-shadow: 0 0 0 4px rgba(94, 168, 255, 0.2);
+  }
+  100% {
+    background-color: transparent;
+    box-shadow: 0 0 0 4px transparent;
+  }
+}
+
+.highlight-flash {
+  animation: flash-highlight 2s ease-out;
+}
+
+/* Typewriter typing text cursor animations */
+.terminal-command-container {
+  display: inline-flex;
+  align-items: center;
+  font-family: inherit;
+}
+
+.terminal-command-text {
+  color: var(--text-color);
+}
+
+.terminal-cursor-blink {
+  color: var(--link-color);
+  animation: blink 0.8s step-end infinite;
+  margin-left: 3px;
+  font-size: 0.9em;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Premium Hover Accent Lines for Items */
+.experience-item, .publication-item {
+  border-left: 2px solid transparent;
+  padding-left: 1rem !important;
+  margin-left: -1rem;
+  transition: border-left-color 0.25s ease, background-color 0.25s ease;
+  border-radius: 0 4px 4px 0;
+}
+
+.experience-item:hover, .publication-item:hover {
+  border-left-color: var(--link-color);
+  background-color: rgba(128, 128, 128, 0.03);
+}
+
+[data-theme='dark'] .experience-item:hover, 
+[data-theme='dark'] .publication-item:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+

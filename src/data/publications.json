@@ -1,44 +1,76 @@
 [
   {
+    "id": "mongan-2025-towards",
+    "type": "journal",
+    "year": 2025,
+    "title": "Towards fair decentralized benchmarking of healthcare AI algorithms with the Federated Tumor Segmentation (FeTS) challenge",
+    "authors": "M. Mongan, U. Baid, S. Pati, M. J. Sheller, G. A. Reina, S. Thakur, et al.",
+    "venue": "Nature Communications",
+    "doi": "https://www.nature.com/articles/s41467-025-60466-1",
+    "abstract": "This study details the outcomes and insights from the Federated Tumor Segmentation (FeTS) challenge, benchmarking decentralized healthcare AI algorithms. It demonstrates that federated learning approaches can construct robust, generalizable segmentation models for neuro-oncology without compromising institutional data privacy."
+  },
+  {
     "id": "thakur-2025-optimization",
     "type": "journal",
     "year": 2025,
     "title": "Optimization of deep learning models for inference in low resource environments",
     "authors": "S. Thakur, S. Pati, B. Baheti, M. Bilello, S. Bakas",
     "venue": "Computers in Biology and Medicine",
-    "doi": "https://doi.org/10.1016/j.compbiomed.2024.109151"
+    "doi": "https://www.sciencedirect.com/science/article/pii/S0010482525009667"
   },
   {
-    "id": "zenk-2025-fets",
+    "id": "bakas-2025-brats",
     "type": "journal",
     "year": 2025,
-    "title": "Towards face decentralized benchmarking of healthcare AI algorithms with the Federated Tumor Segmentation (FeTS) challenge",
-    "authors": "M. Zenk, U. Baid, S. Pati, M. J. Sheller, G. A. Reina, S. Thakur, et al.",
-    "venue": "Nature Communications"
+    "title": "IMG-121. BraTS-Pathology 2024: Insights and Future Directions Informed by the AI-RANO & RANO-RGP Effort to Assess Glioblastoma Heterogeneity",
+    "authors": "S. Bakas, S. Faghani, M. Moassefi, S. Pati, S. Thakur, et al.",
+    "venue": "Neuro-Oncology, Vol. 27",
+    "doi": "https://academic.oup.com/neuro-oncology/article-abstract/27/Supplement_5/v303/8319061"
   },
   {
-    "id": "park-2025-skull",
+    "id": "bakas-2025-unsupervised",
+    "type": "journal",
+    "year": 2025,
+    "title": "An Unsupervised Brain Extraction Quality Control Approach for Efficient Neuro-Oncology Studies",
+    "authors": "S. Bakas, S. Thakur, et al.",
+    "venue": "Journal of Imaging Informatics in Medicine",
+    "doi": "https://doi.org/10.1007/s10278-025-01570-y"
+  },
+  {
+    "id": "bakas-2025-testicular",
+    "type": "journal",
+    "year": 2025,
+    "title": "AI-based robust testicular cancer triaging, a promise for an efficient and cost-effective diagnostic/predictive modality",
+    "authors": "S. Bakas, S. Thakur, et al.",
+    "venue": "Cancer Research, Vol. 85",
+    "doi": "https://aacrjournals.org/cancerres/article/85/8_Supplement_1/2455/756338"
+  },
+  {
+    "id": "thakur-2025-fets-ai",
+    "type": "journal",
+    "year": 2025,
+    "title": "FeTS-AI/Challenge: Creating a new release after incorporating all analysis code",
+    "authors": "S. Thakur",
+    "venue": "Zenodo",
+    "doi": "https://ui.adsabs.harvard.edu/abs/2025zndo..15102249Z/abstract"
+  },
+  {
+    "id": "thakur-2025-profuseme",
     "type": "preprint",
     "year": 2025,
-    "title": "Skull stripping with purely synthetic data",
-    "authors": "J. S. Park, J. Ha, S. Thakur, U. Baid, M. J. Sheller, S. Pati, S. Bakas",
-    "venue": "arXiv preprint arXiv:2505.07159"
+    "title": "PROFUSEme: PROstate Cancer Biochemical Recurrence Prediction via FUSEd Multi-modal Embeddings",
+    "authors": "S. Thakur, et al.",
+    "venue": "Preprint",
+    "doi": ""
   },
   {
-    "id": "baid-2024-til",
-    "type": "conference",
+    "id": "bakas-2024-tmic",
+    "type": "journal",
     "year": 2024,
-    "title": "Pan-Cancer Tumor Infiltrating Lymphocyte Detection based on Federated Learning",
-    "authors": "U. Baid, S. Pati, S. Thakur, M. J. Sheller, G. A. Reina, S. Bakas",
-    "venue": "IEEE International Conference on Big Data (BigData)"
-  },
-  {
-    "id": "thakur-2024-brats",
-    "type": "abstract",
-    "year": 2024,
-    "title": "BRATS-PATH: Assessing heterogeneous pathologic regions in glioblastoma",
-    "authors": "S. Thakur, S. Faghani, M. Moassefi, S. Pati, S. Bakas",
-    "venue": "Neuro-Oncology"
+    "title": "TMIC-60. BRATS-PATH: Assessing Heterogeneous Histopathologic Regions in Glioblastoma",
+    "authors": "S. Bakas, S. Thakur, et al.",
+    "venue": "Neuro-Oncology, Vol. 26",
+    "doi": "https://academic.oup.com/neuro-oncology/article-abstract/26/Supplement_8/viii312/7890732"
   },
   {
     "id": "pati-2023-gandlf",
@@ -46,7 +78,28 @@
     "year": 2023,
     "title": "GaNDLF: the generally nuanced deep learning framework for scalable end-to-end clinical workflows",
     "authors": "S. Pati, S. Thakur, M. J. Sheller, G. A. Reina, B. Baheti, et al.",
-    "venue": "Communications Engineering"
+    "venue": "Nature Communications Engineering, Vol. 2",
+    "doi": "https://doi.org/10.1038/s44172-023-00066-3",
+    "abstract": "The Generally Nuanced Deep Learning Framework (GaNDLF) is a modular, open-source framework designed to simplify end-to-end clinical workflows for medical image segmentation, classification, and regression. It allows clinical researchers without coding expertise to deploy robust deep learning models across multiple modalities."
+  },
+  {
+    "id": "pati-2022-fets-tool",
+    "type": "journal",
+    "year": 2022,
+    "title": "The federated tumor segmentation (FeTS) tool: an open-source solution to further solid tumor research",
+    "authors": "S. Pati, U. Baid, M. J. Sheller, G. A. Reina, S. Thakur, et al.",
+    "venue": "Physics in Medicine & Biology, Vol. 67",
+    "doi": "https://doi.org/10.1088/1361-6560/ac9449",
+    "abstract": "The FeTS tool provides a user-friendly, desktop-based interface enabling clinical researchers to perform deep-learning-based brain tumor segmentation. Crucially, it facilitates decentralized, privacy-preserving federated training across collaborative research networks without transmitting raw patient imaging data."
+  },
+  {
+    "id": "chitalia-2022-expert",
+    "type": "journal",
+    "year": 2022,
+    "title": "Expert tumor annotations and radiomics for locally advanced breast cancer in DCE-MRI for ACRIN 6657/I-SPY1",
+    "authors": "R. Chitalia, S. Pati, S. Thakur, et al.",
+    "venue": "Nature Scientific Data, Vol. 9",
+    "doi": "https://doi.org/10.1038/s41597-022-01555-4"
   },
   {
     "id": "thakur-2022-ms",
@@ -54,30 +107,179 @@
     "year": 2022,
     "title": "Clinically Deployed Computational Assessment of Multiple Sclerosis Lesions",
     "authors": "S. Thakur, M. Schindler, M. Bilello, S. Bakas",
-    "venue": "Frontiers in Medicine"
+    "venue": "Frontiers in Medicine, Vol. 9",
+    "doi": "https://doi.org/10.3389/fmed.2022.797586",
+    "abstract": "This study details a clinically deployed deep learning system for segmenting and tracking Multiple Sclerosis lesions in MRI scans. The system improves throughput and segmentation consistency, validated in real-world clinical data pipelines, showing a 90% reduction in processing runtime and decreasing manual diagnostic effort."
   },
   {
-    "id": "thakur-2021-optim-conf",
+    "id": "thakur-2022-optimization-mri",
     "type": "conference",
-    "year": 2021,
+    "year": 2022,
     "title": "Optimization of deep learning based brain extraction in MRI for low resource environments",
     "authors": "S. Thakur, S. Pati, B. Baheti, M. Bilello, S. Bakas",
-    "venue": "International MICCAI Brainlesion Workshop"
+    "venue": "MICCAI Brainles: LNCS, Vol. 12962. Springer, Cham.",
+    "doi": "https://doi.org/10.1007/978-3-031-08999-2_12"
+  },
+  {
+    "id": "baid-2022-federated-til",
+    "type": "preprint",
+    "year": 2022,
+    "title": "Federated learning for the classification of tumor infiltrating lymphocytes",
+    "authors": "U. Baid, S. Pati, S. Thakur, S. Bakas, et al.",
+    "venue": "arXiv preprint arXiv:2203.16622",
+    "doi": "https://doi.org/10.48550/arXiv.2203.16622"
+  },
+  {
+    "id": "baheti-2022-optimization-abstract",
+    "type": "abstract",
+    "year": 2022,
+    "title": "Optimization of artificial intelligence algorithms for low-resource/clinical environments: focus on clinically-relevant glioma region delineation",
+    "authors": "B. Baheti, S. Thakur, S. Bakas",
+    "venue": "Neuro-Oncology, Vol. 24",
+    "doi": "https://doi.org/10.1093/neuonc/noac209.643"
+  },
+  {
+    "id": "baid-2022-fets-initiative",
+    "type": "abstract",
+    "year": 2022,
+    "title": "The FEderated Tumor Segmentation (FETS) Initiative: The First real-world large-scale data-private collaboration focusing on neuro-oncology",
+    "authors": "U. Baid, S. Thakur, S. Bakas",
+    "venue": "Neuro-Oncology, Vol. 23",
+    "doi": "https://doi.org/10.1093/neuonc/noab196.532"
+  },
+  {
+    "id": "pati-2021-estimating",
+    "type": "conference",
+    "year": 2021,
+    "title": "Estimating Glioblastoma Biophysical Growth Parameters Using Deep Learning Regression",
+    "authors": "S. Pati, S. Thakur, et al.",
+    "venue": "MICCAI Brainles: LNCS, Vol. 12658. Springer, Cham.",
+    "doi": "https://doi.org/10.1007/978-3-030-72084-1_15"
+  },
+  {
+    "id": "pati-2021-gandlf-preprint",
+    "type": "preprint",
+    "year": 2021,
+    "title": "Gandlf: A generally nuanced deep learning framework for scalable end-to-end clinical workflows in medical imaging",
+    "authors": "S. Pati, S. Thakur, S. Bakas, et al.",
+    "venue": "arXiv preprint arXiv:2103.01006",
+    "doi": "https://doi.org/10.48550/arXiv.2103.01006"
+  },
+  {
+    "id": "pati-2020-reproducibility",
+    "type": "journal",
+    "year": 2020,
+    "title": "Reproducibility analysis of multi-institutional paired expert annotations and radiomic features of the Ivy Glioblastoma Atlas Project (Ivy GAP) dataset",
+    "authors": "S. Pati, S. Thakur, et al.",
+    "venue": "Medical Physics, Vol. 47",
+    "doi": "https://doi.org/10.1002/mp.14556"
   },
   {
     "id": "thakur-2020-brain-extraction",
     "type": "journal",
     "year": 2020,
-    "title": "Brain extraction on MRI scans in presence of diffuse glioma: Multi-institutional performance evaluation",
-    "authors": "S. Thakur, J. Doshi, S. Pati, S. Thakur, M. Bilello, S. Bakas",
-    "venue": "Neuroimage"
+    "title": "Brain Extraction on MRI scans in presence of diffuse glioma: Multi-institutional performance evaluation of deep learning methods and robust modality-agnostic training",
+    "authors": "S. Thakur, J. Doshi, S. Pati, M. Bilello, S. Bakas",
+    "venue": "NeuroImage, Vol. 220",
+    "doi": "https://doi.org/10.1016/j.neuroimage.2020.117081"
   },
   {
-    "id": "bhalerao-2019-brain-tumor",
+    "id": "reina-2020-systematic",
+    "type": "journal",
+    "year": 2020,
+    "title": "Systematic evaluation of image tiling adverse effects on deep learning semantic segmentation",
+    "authors": "G. A. Reina, S. Thakur, et al.",
+    "venue": "Frontiers of neuroscience, Vol. 14",
+    "doi": "https://doi.org/10.3389/fnins.2020.00065"
+  },
+  {
+    "id": "bhalerao-2020-brain",
     "type": "conference",
-    "year": 2019,
+    "year": 2020,
     "title": "Brain tumor segmentation based on 3D residual U-Net",
     "authors": "M. Bhalerao, S. Thakur",
-    "venue": "International MICCAI Brainlesion Workshop"
+    "venue": "MICCAI BrainLes: LNCS, Vol. 11993. Springer, Cham.",
+    "doi": "https://doi.org/10.1007/978-3-030-46643-5_21"
+  },
+  {
+    "id": "thakur-2020-skull-stripping",
+    "type": "conference",
+    "year": 2020,
+    "title": "Skull-Stripping of Glioblastoma MRI Scans Using 3D Deep Learning",
+    "authors": "S. Thakur, J. Doshi, S. Pati, M. Bilello, S. Bakas",
+    "venue": "MICCAI BrainLes, Vol. 11992, Springer, Cham.",
+    "doi": "https://doi.org/10.1007/978-3-030-46640-4_6"
+  },
+  {
+    "id": "pati-2020-captk",
+    "type": "conference",
+    "year": 2020,
+    "title": "The Cancer Imaging Phenomics Toolkit (CaPTk): Technical Overview",
+    "authors": "S. Pati, S. Thakur, et al.",
+    "venue": "MICCAI BrainLes, Vol. 11993, Springer, Cham.",
+    "doi": "https://doi.org/10.1007/978-3-030-46643-5_38"
+  },
+  {
+    "id": "pati-2020-growth",
+    "type": "abstract",
+    "year": 2020,
+    "title": "Glioblastoma Biophysical Growth Estimation using Deep Learning-based regression",
+    "authors": "S. Pati, S. Thakur, S. Bakas",
+    "venue": "Neuro-Oncology, Vol. 21",
+    "doi": "https://doi.org/10.1093/neuonc/noaa215.960"
+  },
+  {
+    "id": "thakur-2019-pose",
+    "type": "conference",
+    "year": 2019,
+    "title": "Pose Estimation for Distracted Driver Detection Using Deep Convolutional Neural Networks",
+    "authors": "S. Thakur, S. Talbar",
+    "venue": "ICVGIP, WCVA2018 : CCIS, Vol. 1019. Springer, Cham.",
+    "doi": "https://doi.org/10.1007/978-981-15-1387-9_9"
+  },
+  {
+    "id": "baid-2019-deep",
+    "type": "conference",
+    "year": 2019,
+    "title": "Deep Learning Radiomics Algorithm for Gliomas (DRAG) Model: A Novel Approach Using 3D UNET Based Deep Convolutional Neural Network for Predicting Survival in Gliomas",
+    "authors": "U. Baid, S. Thakur, A. Mahajan",
+    "venue": "MICCAI Brainles: LNCS, Vol. 11384. Springer, Cham.",
+    "doi": "https://doi.org/10.1007/978-3-030-11726-9_33"
+  },
+  {
+    "id": "thakur-2019-skull-stripping-abstract",
+    "type": "abstract",
+    "year": 2019,
+    "title": "Robust modality-agnostic skull-stripping in presence of diffuse glioma: a multi-institutional study",
+    "authors": "S. Thakur, S. Bakas",
+    "venue": "Neuro-Oncology, Vol. 21",
+    "doi": "https://doi.org/10.1093/neuonc/noz175.713"
+  },
+  {
+    "id": "reina-2019-image-tiling-abstract",
+    "type": "abstract",
+    "year": 2019,
+    "title": "Adverse effects of image tiling for automatic deep learning glioma segmentation in MRI",
+    "authors": "G. A. Reina, Siddhesh Thakur, S. Bakas",
+    "venue": "Neuro-Oncology, Vol. 21",
+    "doi": "https://doi.org/10.1093/neuonc/noz175.72"
+  },
+  {
+    "id": "baid-2018-gbm",
+    "type": "conference",
+    "year": 2018,
+    "title": "GBM segmentation with 3D U-Net and survival prediction with radiomics",
+    "authors": "U. Baid, S. Thakur, S. Gupta, et al.",
+    "venue": "MICCAI BraTS Challenge, pp. 28-35",
+    "doi": ""
+  },
+  {
+    "id": "bakas-2018-identifying",
+    "type": "preprint",
+    "year": 2018,
+    "title": "Identifying the Best Machine Learning Algorithms for Brain Tumor Segmentation, Progression Assessment, and Overall Survival Prediction in the BRATS Challenge",
+    "authors": "S. Bakas, S. Thakur, et al.",
+    "venue": "arXiv preprint arXiv:1811.02629",
+    "doi": "https://doi.org/10.48550/arXiv.1811.02629"
   }
 ]

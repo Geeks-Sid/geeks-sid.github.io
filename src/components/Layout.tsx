@@ -1,10 +1,10 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { NavLink, Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import { useTheme } from '../context/ThemeContext';
 import { useSearch } from '../hooks/useSearch';
 import publicationsData from '../data/publications.json';
-import { getPosts, Post } from '../pages/Blog';
+import { getPosts } from '../pages/Blog';
 import './Layout.css';
 
 interface LayoutProps {
@@ -14,8 +14,30 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const navigate = useNavigate();
   const searchInputRef = useRef<HTMLInputElement>(null);
+
+  const [activeSection, setActiveSection] = useState('about');
+  const [scrollPercent, setScrollPercent] = useState(0);
+
+  // Typewriter effect for brand name (runs once on mount)
+  const brandName = "Siddhesh Thakur";
+  const [typedBrandName, setTypedBrandName] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+
+  useEffect(() => {
+    let idx = 0;
+    const interval = setInterval(() => {
+      if (idx < brandName.length) {
+        setTypedBrandName(brandName.slice(0, idx + 1));
+        idx++;
+      } else {
+        setIsTyping(false);
+        clearInterval(interval);
+      }
+    }, 70);
+    return () => clearInterval(interval);
+  }, []);
 
   const posts = useMemo(() => getPosts(), []);
   
@@ -36,6 +58,41 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   const hasResults = (pubQuery || blogQuery) && (pubResults.length > 0 || blogResults.length > 0);
   const isSearching = pubQuery || blogQuery;
+
+  // Track active section and scroll progress during scroll
+  useEffect(() => {
+    if (location.pathname !== '/') {
+      setScrollPercent(0);
+      return;
+    }
+
+    const sections = ['about', 'experience', 'publications', 'blog', 'achievements', 'dashboard'];
+    const handleScroll = () => {
+      let currentActive = 'about';
+      for (const section of sections) {
+        const el = document.getElementById(section);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          // If the top of the section is above 40% of viewport height
+          if (rect.top <= window.innerHeight * 0.4) {
+            currentActive = section;
+          }
+        }
+      }
+      setActiveSection(currentActive);
+
+      // Track scroll progress
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      setScrollPercent(percent);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    // Initial check
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [location.pathname]);
 
   // Keyboard shortcut CMD+K or / to focus search
   useEffect(() => {
@@ -65,26 +122,55 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     setBlogQuery('');
   }, [location.pathname, setPubQuery, setBlogQuery]);
 
+  const handleNavClick = (sectionId: string, e: React.MouseEvent) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  const handleSearchResultClick = (type: 'pub' | 'blog', idOrSlug: string, e: React.MouseEvent) => {
+    setPubQuery('');
+    setBlogQuery('');
+    
+    if (type === 'pub') {
+      e.preventDefault();
+      if (location.pathname !== '/') {
+        navigate(`/#publications`);
+        // Wait for navigation and mount
+        setTimeout(() => {
+          const el = document.getElementById(idOrSlug) || document.getElementById('publications');
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+            el.classList.add('highlight-flash');
+            setTimeout(() => el.classList.remove('highlight-flash'), 2000);
+          }
+        }, 150);
+      } else {
+        const el = document.getElementById(idOrSlug) || document.getElementById('publications');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+          el.classList.add('highlight-flash');
+          setTimeout(() => el.classList.remove('highlight-flash'), 2000);
+        }
+      }
+    }
+  };
+
   return (
     <div className="app-container">
       <header className="top-nav-header">
         <div className="nav-brand">
-          <NavLink to="/" className="brand-name">Siddhesh Thakur</NavLink>
+          <Link to="/" onClick={(e) => handleNavClick('about', e)} className="brand-name">
+            {typedBrandName}
+            {isTyping && <span className="brand-cursor">▊</span>}
+          </Link>
         </div>
         
-        <div className="header-center">
-          <nav className="horizontal-nav" aria-label="Main Navigation">
-            <ul>
-              <li><NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>[ About ]</NavLink></li>
-              <li><NavLink to="/experience" className={({ isActive }) => isActive ? 'active' : ''}>[ Experience ]</NavLink></li>
-              <li><NavLink to="/publications" className={({ isActive }) => isActive ? 'active' : ''}>[ Publications ]</NavLink></li>
-              <li><NavLink to="/blog" className={({ isActive }) => isActive ? 'active' : ''}>[ Blog ]</NavLink></li>
-              <li><NavLink to="/achievements" className={({ isActive }) => isActive ? 'active' : ''}>[ Achievements ]</NavLink></li>
-              <li><NavLink to="/dashboard" className={({ isActive }) => isActive ? 'active' : ''}>[ Dashboard ]</NavLink></li>
-            </ul>
-
-          </nav>
-
+        <div className="header-center-search">
           <div className="global-search-container">
             <span className="search-icon">🔍</span>
             <input
@@ -92,7 +178,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               type="text"
               value={pubQuery || blogQuery}
               onChange={(e) => handleGlobalSearch(e.target.value)}
-              placeholder="Search... (⌘K)"
+              placeholder="Search... (⌘K or /)"
               className="global-search-input"
               autoComplete="off"
             />
@@ -105,12 +191,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <ul>
                       {pubResults.slice(0, 5).map(pub => (
                         <li key={pub.id}>
-                          <Link to="/publications" onClick={() => {
-                            // Ideally this would scroll to the item, but for now just navigate
-                          }}>
+                          <a href={`/#${pub.id}`} onClick={(e) => handleSearchResultClick('pub', pub.id, e)}>
                             <span className="result-title">{pub.title}</span>
                             <span className="result-meta">{pub.year} • {pub.venue}</span>
-                          </Link>
+                          </a>
                         </li>
                       ))}
                     </ul>
@@ -123,7 +207,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <ul>
                       {blogResults.slice(0, 5).map(post => (
                         <li key={post.slug}>
-                          <Link to={`/blog/${post.slug}`}>
+                          <Link to={`/blog/${post.slug}`} onClick={() => { setPubQuery(''); setBlogQuery(''); }}>
                             <span className="result-title">{post.title}</span>
                             <span className="result-meta">{post.date}</span>
                           </Link>
@@ -146,10 +230,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {theme === 'light' ? '☾' : '☼'}
           </button>
         </div>
+        <div className="header-scroll-progress-container">
+          <div className="header-scroll-progress-bar" style={{ width: `${scrollPercent}%` }} />
+        </div>
       </header>
 
       <div className="layout-content">
-        <Sidebar />
+        <Sidebar activeSection={activeSection} />
         <main className="main-content">
           {children}
         </main>

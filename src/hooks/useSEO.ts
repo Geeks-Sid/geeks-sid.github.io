@@ -4,10 +4,12 @@ interface SEOProps {
   title: string;
   description?: string;
   meta?: Array<{ name?: string; property?: string; content: string }>;
+  disabled?: boolean;
 }
 
-export const useSEO = ({ title, description, meta = [] }: SEOProps) => {
+export const useSEO = ({ title, description, meta = [], disabled = false }: SEOProps) => {
   useEffect(() => {
+    if (disabled) return;
     document.title = `${title} | Siddhesh Thakur`;
 
     const descriptionTag = document.querySelector('meta[name="description"]');
@@ -28,5 +30,6 @@ export const useSEO = ({ title, description, meta = [] }: SEOProps) => {
       tag.setAttribute('data-dynamic', 'true');
       document.head.appendChild(tag);
     });
-  }, [title, description, meta]);
+  }, [title, description, meta, disabled]);
 };
+

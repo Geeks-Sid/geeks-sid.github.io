@@ -175,6 +175,25 @@
   font-size: 0.85rem;
 }
 
+.activity-item::before {
+  content: "•";
+  color: #27c93f;
+  margin-right: 0.2rem;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    opacity: 0.5; 
+    filter: drop-shadow(0 0 1px rgba(39, 201, 63, 0.2));
+  }
+  50% { 
+    opacity: 1; 
+    filter: drop-shadow(0 0 4px rgba(39, 201, 63, 0.8));
+  }
+}
+
 @media (max-width: 900px) {
   .neofetch-container {
     justify-content: center;

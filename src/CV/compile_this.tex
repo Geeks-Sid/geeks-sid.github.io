@@ -1,0 +1,390 @@
+%-------------------------
+% Resume in Latex
+% Author : Aras Gungore
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+
+
+%---------- FONT OPTIONS ----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeEducationHeading}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeOrganizationHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%---------- HEADING ----------
+
+\begin{center}
+    \textbf{\Huge \scshape \textbf{Siddhesh Thakur}} \\ \vspace{3pt}
+    \small
+    \faMobile \hspace{.5pt} \href{tel:+12678818051}{+1-267-881-8051}
+    $|$
+    \faAt \hspace{.5pt} \href{mailto:siddhesh0011@gmail.com}{siddhesh0011@gmail.com}
+    $|$
+    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/siddheshthakur04/}{LinkedIn}
+    $|$
+    \faGithub \hspace{.5pt} \href{https://github.com/geeks-sid}{GitHub}
+    $|$
+    \faGlobe \hspace{.5pt} \href{https://geeks-sid.github.io}{Portfolio}
+    $|$
+    \faMapMarker \hspace{.5pt} Indianapolis, Indiana, USA
+\end{center}
+
+%----------- SUMMARY -----------
+
+\section{Summary}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    \resumeItem{Machine Learning Engineer with 7 years of experience in developing and implementing reproducible and publicly available deep learning algorithms for medical imaging, multi-modal AI and Large Language Models. Specializes in whole slide image analysis in digital pathology and radiology imaging to improve diagnostic accuracy.}
+  \resumeSubHeadingListEnd
+
+%----------- EDUCATION -----------
+
+\section{Education}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Georgia Institute of Technology}{Atlanta, Georgia}
+      {Master of Science in Computer Science}{Jan 2024 -- Dec 2025}
+    \resumeSubheading
+      {SGGSIE\&T, Department of Computer Science and Engineering}{Nanded, MH, India}
+      {Bachelor of Technology in Computer Science}{Jul 2015 -- Aug 2019}
+  \resumeSubHeadingListEnd
+
+
+%----------- EXPERIENCE -----------
+
+\section{Experience}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Data Engineer}{Indianapolis, IN, USA}
+      {Division of Computational Pathology, Indiana University School of Medicine \& IU Health}{Sep 2023 -- Present}
+        \resumeItemListStart
+            \resumeItem{Managing a team of 4 for digitization, data structuring and Quality control for Digital pathology.}
+            \resumeItem{Created a Pipeline for Structured Data Extraction from unstructure data using LLM, enabling large scale data extraction from untapped clinical data}
+            \resumeItem{Optimized Model for AI in Radiology achieving up to 5.4× inference speedup and ~80\% reduction in memory use with negligible accuracy drop, enabling deployment on consumer-grade CPUs.}
+            \resumeItem{Co-developed an unsupervised QC pipeline for brain extraction for neuro-oncology imaging studies, helping automate data‐quality verification upstream of downstream segmentation/classification workflows.}
+            \resumeItem{Engineered a comprehensive End-to-End pipeline for Whole Slide Images encompassing Tagging, Ingestion, Conversion, Anonymization, and Quality Control with Role-Based Access Control (RBAC) systems.}
+            \resumeItem{Spearheaded the deployment and maintenance of Data Visualization tools for optimizing data interpretation and analysis with clinicians.}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Data Analyst}{Philadelphia, PA, USA}
+      {CBICA, Perelman School of Medicine, University of Pennsylvania}{Sep 2019 -- Sep 2023}
+        \resumeItemListStart
+             \resumeItem{Pioneered a user-friendly Deep Learning Framework for Medical Imaging, integrating cutting-edge Digital Pathology features, requiring no programming expertise for end users.}
+            \resumeItem{Implemented a Deep Learning algorithm for Brain Extraction, vital to a global Federated Tumor Segmentation (FeTS, validated over 10,000 cases, enhancing pre-processing efficiency.}
+            \resumeItem{Devised innovative strategies for optimizing Deep Learning algorithms in low-resource settings, notably enhancing medical imaging capabilities in underserved communities.}
+            \resumeItem{Led the deployment of a clinical Deep Learning pipeline for Multiple Sclerosis, significantly reducing Gadolinium usage and cutting runtime by 90\%, thereby demonstrating substantial clinical improvements.}
+            \resumeItem{Developed and validated a Brain Extraction software using Deep Learning, backed by comprehensive statistical analysis, ensuring high robustness and accuracy.}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Intern}{Philadelphia, PA, USA}
+      {CBICA, Perelman School of Medicine, University of Pennsylvania}{Jan 2019 -- Aug 2019}
+        \resumeItemListStart
+            \resumeItem{Conducted in-depth analysis and evaluation of Brain Extraction techniques in the presence of diffuse gliomas.}
+            \resumeItem{Developed and innovated a Deep Learning-based method for Brain Extraction, resulting in a deployable package, BrainMaGe.}
+        \resumeItemListEnd
+        
+    \resumeSubheading
+      {Research Intern}{Nanded, MH, India}
+      {COESIP, Department of Electronics and Telecommunication, SGGSIE\&T}{Aug 2018 -- Sep 2018}
+        \resumeItemListStart
+            \resumeItem{Secured 3rd position among 390 global research labs in the Brain Tumor Segmentation Challenge (BRaTS) 2018 at MICCAI, excelling in Survival Prediction of brain tumors.}
+            \resumeItem{Implemented a Deep Learning-based workflow involving co-registration and Bias Field Correction using 3D-UNet for Brain Tumor Segmentation (BraTS).}
+            \resumeItem{Engineered a post-segmentation pipeline for radiomic feature extraction in gliomas, and developed Machine Learning algorithms for Brain Tumor Survival Prediction.}
+        \resumeItemListEnd
+        
+    \resumeSubheading
+      {Research Intern}{Nanded, MH, India}
+      {COESIP, Department of Electronics and Telecommunication, SGGSIE\&T}{Apr 2018 -- Jul 2018}
+        \resumeItemListStart
+            \resumeItem{Developed Deep Learning and Computer Vision algorithms for the early detection of pulmonary lung nodules in lung cancer patients.}
+            \resumeItem{Conducted extensive data preprocessing and analysis on a large dataset of lung CT scans, significantly enhancing the accuracy of the developed models.}
+            \resumeItem{Created an innovative method for lung field extraction, substantially reducing the Region of Interest and boosting the model accuracy.}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Intern}{Nanded, MH, India}
+      {HPC Lab, Department of Computer Science, SGGSIE\&T}{May 2017 -- Jul 2017}
+        \resumeItemListStart
+            \resumeItem{Developed a Recommender System utilizing PySpark to implement Collaborative Filtering for recommendations in Entertainment.}
+        \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+  
+
+
+%----------- PUBLICATIONS -----------
+\section{Publications}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    \item\small{\textbf{Journal Publications}}
+      \resumeItemListStart
+        \resumeItem{[1] \textbf{S. Thakur}, S. Pati, B. Baheti, M. Bilello, S. Bakas. "Optimization of deep learning models for inference in low resource environments." \textit{Computers in Biology and Medicine}, 2025.}
+        \resumeItem{[2] M. Zenk, U. Baid, S. Pati, M. J. Sheller, G. A. Reina, \textbf{S. Thakur}, S. Bakas, and the FeTS Initiative. "Towards fair decentralized benchmarking of healthcare AI algorithms with the Federated Tumor Segmentation (FeTS) challenge." \textit{Nature Communications}, 2025.}
+        \resumeItem{[3] S. Pati, S. Wagner, \textbf{S. Thakur}, A. Z. Abidin, Z. Zhu, A. Goel, A. S. Nabavizadeh, M. Bilello, S. Bakas. "An Unsupervised Brain Extraction Quality Control Approach for Efficient Neuro-Oncology Studies." \textit{Journal of Imaging Informatics in Medicine}, 2025.}
+        \resumeItem{[4] S. Pati, \textbf{S. Thakur}, M. J. Sheller, G. A. Reina, B. Baheti, U. Baid, A. Z. Abidin, Z. Zhu, P. K. K. Pandiyan, V. K. S. Buddaraju, M. Bilello, S. Bakas. "GaNDLF: the generally nuanced deep learning framework for scalable end-to-end clinical workflows." \textit{Communications Engineering}, 2023.}
+        \resumeItem{[5] S. Pati, U. Baid, M. J. Sheller, G. A. Reina, A. P. Shah, B. Edwards, \textbf{S. Thakur}, S. H. Lo, D. G. M. Bentivoglio, S. Bakas, and the FeTS Initiative. "The federated tumor segmentation (FeTS) tool: an open-source solution to further solid tumor research." \textit{Physics in Medicine \& Biology}, 2022.}
+        \resumeItem{[6] R. Chitalia, S. Pati, S. Thakur, M. A. Mazurowski, M. L. Zuley, M. M. Teslovich, C. D. Lehman, C. P. Kuhl, S. G. Gatsonis, J. C. Honeyman, L. P. Pyle, D. C. Newitt, N. M. Hylton, S. Bakas. "Expert tumor annotations and radiomics for locally advanced breast cancer in DCE-MRI for ACRIN 6657/I-SPY1." \textit{Scientific Data}, 2022.}
+        \resumeItem{[7] \textbf{S. Thakur}, M. Schindler, M. Bilello, S. Bakas. "Clinically Deployed Computational Assessment of Multiple Sclerosis Lesions." \textit{Frontiers in Medicine}, 2022.}
+        \resumeItem{[8] S. Pati, R. Verma, \textbf{S. Thakur}, G. A. Reina, U. Baid, \textbf{S. Thakur}, R. T. Shinohara, S. Bakas. "Reproducibility analysis of multi‐institutional paired expert annotations and radiomic features of the Ivy GAP dataset." \textit{Medical Physics}, 2020.}
+        \resumeItem{[9] \textbf{S. Thakur}, J. Doshi, S. Pati, \textbf{S. Thakur}, M. Bilello, S. Bakas. "Brain extraction on MRI scans in presence of diffuse glioma: Multi-institutional performance evaluation" \textit{Neuroimage}, 2020.}
+        \resumeItem{[10] G. A. Reina, R. Panchumarthy, \textbf{S. Thakur}, U. Baid, A. Singh, S. H. Lo, P. Foley, S. Pati, S. Bakas. "Systematic evaluation of image tiling adverse effects on deep learning semantic segmentation." \textit{Frontiers in Neuroscience}, 2020.}
+      \resumeItemListEnd
+
+    \item\small{\textbf{Conference Publications}}
+      \resumeItemListStart
+        \resumeItem{[1] U. Baid, S. Pati, \textbf{S. Thakur}, M. J. Sheller, G. A. Reina, S. Bakas. "Pan-Cancer Tumor Infiltrating Lymphocyte Detection based on Federated Learning." \textit{IEEE International Conference on Big Data (BigData)}, 2024.}
+        \resumeItem{[2] \textbf{S. Thakur}, S. Pati, B. Baheti, M. Bilello, S. Bakas. "Optimization of deep learning based brain extraction in MRI for low resource environments." \textit{International MICCAI Brainlesion Workshop}, 2021.}
+        \resumeItem{[3] S. Pati, V. Sharma, \textbf{S. Thakur}, \textbf{S. Thakur}, M. Bilello, S. Bakas. "Estimating glioblastoma biophysical growth parameters using deep learning regression." \textit{International MICCAI Brainlesion Workshop}, 2020.}
+        \resumeItem{[4] M. Bhalerao, \textbf{S. Thakur}. "Brain tumor segmentation based on 3D residual U-Net." \textit{International MICCAI Brainlesion Workshop}, 2019.}
+        \resumeItem{[5] \textbf{S. Thakur}, J. Doshi, S. Pati, M. Bilello, S. Bakas. "Skull-stripping of glioblastoma MRI scans using 3D deep learning." \textit{International MICCAI Brainlesion Workshop}, 2019.}
+        \resumeItem{[6] S. Pati, A. Singh, \textbf{S. Thakur}, U. Baid, S. H. Lo, M. Bilello, S. Bakas. "The cancer imaging phenomics toolkit (CaPTk): technical overview." \textit{International MICCAI Brainlesion Workshop}, 2019.}
+        \resumeItem{[7] U. Baid, S. Talbar, \textbf{S. Thakur}, M. Bilello, S. Bakas. "Deep learning radiomics algorithm for gliomas (DRAG) model" \textit{International MICCAI Brainlesion Workshop}, 2018.}
+        \resumeItem{[8] \textbf{S. Thakur}, B. Baheti, S. Gajre, S. Talbar. "Pose estimation for distracted driver detection using deep convolutional neural networks." \textit{Workshop on Computer Vision Applications}, 2018.}
+        \resumeItem{[9] U. Baid, A. Mahajan, \textbf{S. Thakur}, M. Bilello, S. Bakas. "GBM segmentation with 3D U-Net and survival prediction with radiomics." \textit{MICCAI BraTS Challenge}, 2018.}
+      \resumeItemListEnd
+      
+    \item\small{\textbf{Preprints}}
+      \resumeItemListStart
+        \resumeItem{[1] J. S. Park, J. Ha, \textbf{S. Thakur}, U. Baid, M. J. Sheller, S. Pati, S. Bakas. "Skull stripping with purely synthetic data." \textit{arXiv preprint arXiv:2505.07159}, 2025.}
+        \resumeItem{[2] S. You, S. Adap, \textbf{S. Thakur}, R. Chitalia, A. Z. Abidin, Z. Zhu, S. Pati, M. D. Feldman, S. Bakas. "Biochemical Prostate Cancer Recurrence Prediction: Thinking Fast \& Slow." \textit{arXiv preprint arXiv:2409.02284}, 2024.}
+        \resumeItem{[3] S. Bakas, \textbf{S. Thakur}, S. Faghani, S. Pati, and the BraTS-Path Challenge Consortium. "Brats-path challenge: Assessing heterogeneous histopathologic brain tumor sub-regions." \textit{arXiv preprint arXiv:2405.10871}, 2024.}
+        \resumeItem{[4] U. Baid, S. Pati, \textbf{S. Thakur}, M. J. Sheller, G. A. Reina, S. Bakas, and the FeTS Initiative. "Federated learning for the classification of tumor infiltrating lymphocytes." \textit{arXiv preprint arXiv:2203.16622}, 2022.}
+        \resumeItem{[5] S. Pati, \textbf{S. Thakur}, M. J. Sheller, G. A. Reina, B. Baheti, U. Baid, A. Z. Abidin, Z. Zhu, P. K. K. Pandiyan, V. K. S. Buddaraju, M. Bilello, S. Bakas. "Gandlf: A generally nuanced deep learning framework for scalable end-to-end clinical workflows in medical imaging." \textit{arXiv preprint arXiv:2103.01006}, 2021.}
+        \resumeItem{[6] S. Bakas, M. Reyes, A. Jakab, S. Bauer, M. Rempfler, A. Crimi, R. T. Shinohara, C. Berger, S. H. Lo, M. J. Sheller, G. A. Reina, \textbf{S. Thakur}, and the BraTS Challenge Consortium. "Identifying the best machine learning algorithms for brain tumor segmentation in the BRATS challenge." \textit{arXiv preprint arXiv:1811.02629}, 2018.}
+      \resumeItemListEnd
+
+    \item\small{\textbf{Abstracts}}
+      \resumeItemListStart
+        \resumeItem{[2] \textbf{S. Thakur}, S. Faghani, M. Moassefi, S. Pati, S. Bakas, and the BraTS-Path Challenge Consortium. "TMIC-60. BRATS-PATH: Assessing heterogeneous histopathologic regions in glioblastoma." \textit{Neuro-Oncology}, 2024.}
+        \resumeItem{[3] B. Baheti, \textbf{S. Thakur}, S. Pati, M. Bilello, S. Bakas. "NIMG-25. Optimization of artificial intelligence algorithms for low-resource/clinical environments" \textit{Neuro-Oncology}, 2022.}
+        \resumeItem{[4] U. Baid, S. Pati, \textbf{S. Thakur}, M. J. Sheller, G. A. Reina, S. Bakas, and the FeTS Initiative. "The federated tumor segmentation (fets) initiative: The first real-world large-scale data-private collaboration" \textit{Neuro-Oncology}, 2021.}
+        \resumeItem{[5] S. Pati, V. Sharma, \textbf{S. Thakur}, M. Bilello, S. Bakas. "Tmod-09. Glioblastoma biophysical growth estimation using deep learning-based regression." \textit{Neuro-Oncology}, 2020.}
+        \resumeItem{[6] \textbf{S. Thakur}, J. Doshi, S. Pati, M. Bilello, S. Bakas. "NIMG-40. Robust modality-agnostic skull-stripping in presence of diffuse glioma: a multi-institutional study." \textit{Neuro-Oncology}, 2019.}
+      \resumeItemListEnd
+
+    \item\small{\textbf{In-Press/In-Review}}
+      \resumeItemListStart
+        \resumeItem{[1] S. You, \textbf{S. Thakur}, ... S. Bakas. "AI-based robust testicular cancer triaging, a promise for an efficient and cost-effective diagnostic/predictive modality." \textit{Modern Pathology}, 2026. In Review}
+        \resumeItem{[2] \textbf{S. Thakur}, ..., S. Bakas, and the BraTS-Path Challenge Consortium. "BraTS-Path 2024 Challenge: Assessing Heterogeneous Histopathologic Brain Tumor Sub-regions" \textit{Neuro-Oncology}, 2026. In Review}
+        \resumeItem{[3] A. Linardos, \textbf{S. Thakur}, ..., S. Bakas, and the BraTS-Path Challenge Consortium. "Classifier-Free Diffusion Probabilistic Model for Conditional Image Synthesis in Breast Cancer" \textit{Nat. Sci. Reports}, 2026. In Review}
+        \resumeItem{[3] B. Baheti, \textbf{S. Thakur}, S. Pati, M. Bilello, S. Bakas. "Pa" \textit{Neuro-Oncology}, 2022.}
+        \resumeItem{[4] U. Baid, S. Pati, \textbf{S. Thakur}, M. J. Sheller, G. A. Reina, S. Bakas, and the FeTS Initiative. "The federated tumor segmentation (fets) initiative: The first real-world large-scale data-private collaboration" \textit{Neuro-Oncology}, 2021.}
+        \resumeItem{[5] S. Pati, V. Sharma, \textbf{S. Thakur}, M. Bilello, S. Bakas. "Tmod-09. Glioblastoma biophysical growth estimation using deep learning-based regression." \textit{Neuro-Oncology}, 2020.}
+        \resumeItem{[6] \textbf{S. Thakur}, J. Doshi, S. Pati, M. Bilello, S. Bakas. "NIMG-40. Robust modality-agnostic skull-stripping in presence of diffuse glioma: a multi-institutional study." \textit{Neuro-Oncology}, 2019.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%----------- PUBLICATIONS -----------
+\section{Publications}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+    \item\small{\textbf{Journal Publications}}
+      \resumeItemListStart
+        \resumeItem{[1] \textbf{\textbf{S. Thakur}}, S. Pati, et al. "Optimization of deep learning models for inference in low resource environments." \textit{Computers in Biology and Medicine}, 2025.}
+        \resumeItem{[2] M. Zenk, U. Baid, S. Pati, et al. (incl. \textbf{\textbf{S. Thakur}}). "Towards fair decentralized benchmarking of healthcare AI algorithms with the Federated Tumor Segmentation (FeTS) challenge." \textit{Nature Communications}, 2025.}
+        \resumeItem{[3] S. Pati, S. Wagner, \textbf{\textbf{S. Thakur}}, et al. "An Unsupervised Brain Extraction Quality Control Approach for Efficient Neuro-Oncology Studies." \textit{Journal of Imaging Informatics in Medicine}, 2025.}
+        \resumeItem{[4] S. Pati, \textbf{S.P. Thakur}, et al. "GaNDLF: the generally nuanced deep learning framework for scalable end-to-end clinical workflows." \textit{Communications Engineering}, 2023.}
+        \resumeItem{[5] S. Pati, U. Baid, et al. (incl. \textbf{\textbf{S. Thakur}}). "The federated tumor segmentation (FeTS) tool: an open-source solution to further solid tumor research." \textit{Physics in Medicine \& Biology}, 2022.}
+        \resumeItem{[6] R. Chitalia, S. Pati, et al. (incl. \textbf{S.P. Thakur}). "Expert tumor annotations and radiomics for locally advanced breast cancer in DCE-MRI for ACRIN 6657/I-SPY1." \textit{Scientific Data}, 2022.}
+        \resumeItem{[7] \textbf{S.P. Thakur}, M. Schindler, M. Bilello, S. Bakas. "Clinically Deployed Computational Assessment of Multiple Sclerosis Lesions." \textit{Frontiers in Medicine}, 2022.}
+        \resumeItem{[8] S. Pati, R. Verma, et al. (incl. \textbf{\textbf{S. Thakur}}). "Reproducibility analysis of multi‐institutional paired expert annotations and radiomic features of the Ivy GAP dataset." \textit{Medical Physics}, 2020.}
+        \resumeItem{[9] \textbf{\textbf{S. Thakur}}, J. Doshi, S. Pati, et al. "Brain extraction on MRI scans in presence of diffuse glioma: Multi-institutional performance evaluation" \textit{Neuroimage}, 2020.}
+        \resumeItem{[10] G.A. Reina, R. Panchumarthy, \textbf{S.P. Thakur}, et al. "Systematic evaluation of image tiling adverse effects on deep learning semantic segmentation." \textit{Frontiers in Neuroscience}, 2020.}
+      \resumeItemListEnd
+
+    \item\small{\textbf{Conference Publications}}
+      \resumeItemListStart
+        \resumeItem{[1] U. Baid, S. Pati, et al. (incl. \textbf{S.P. Thakur}). "Pan-Cancer Tumor Infiltrating Lymphocyte Detection based on Federated Learning." \textit{IEEE International Conference on Big Data (BigData)}, 2024.}
+        \resumeItem{[2] \textbf{S.P. Thakur}, S. Pati, et al. "Optimization of deep learning based brain extraction in MRI for low resource environments." \textit{International MICCAI Brainlesion Workshop}, 2021.}
+        \resumeItem{[3] S. Pati, V. Sharma, et al. (incl. \textbf{S.P. Thakur}). "Estimating glioblastoma biophysical growth parameters using deep learning regression." \textit{International MICCAI Brainlesion Workshop}, 2020.}
+        \resumeItem{[4] M. Bhalerao, \textbf{\textbf{S. Thakur}}. "Brain tumor segmentation based on 3D residual U-Net." \textit{International MICCAI Brainlesion Workshop}, 2019.}
+        \resumeItem{[5] \textbf{S.P. Thakur}, J. Doshi, S. Pati, et al. "Skull-stripping of glioblastoma MRI scans using 3D deep learning." \textit{International MICCAI Brainlesion Workshop}, 2019.}
+        \resumeItem{[6] S. Pati, A. Singh, et al. (incl. \textbf{\textbf{S. Thakur}}). "The cancer imaging phenomics toolkit (CaPTk): technical overview." \textit{International MICCAI Brainlesion Workshop}, 2019.}
+        \resumeItem{[7] U. Baid, S. Talbar, et al. (incl. \textbf{\textbf{S. Thakur}}). "Deep learning radiomics algorithm for gliomas (DRAG) model" \textit{International MICCAI Brainlesion Workshop}, 2018.}
+        \resumeItem{[8] \textbf{\textbf{S. Thakur}}, B. Baheti, S. Gajre, S. Talbar. "Pose estimation for distracted driver detection using deep convolutional neural networks." \textit{Workshop on Computer Vision Applications}, 2018.}
+        \resumeItem{[9] U. Baid, A. Mahajan, et al. (incl. \textbf{\textbf{S. Thakur}}). "GBM segmentation with 3D U-Net and survival prediction with radiomics." \textit{MICCAI BraTS Challenge}, 2018.}
+      \resumeItemListEnd
+      
+    \item\small{\textbf{Preprints}}
+      \resumeItemListStart
+        \resumeItem{[1] J.S. Park, J. Ha, \textbf{\textbf{S. Thakur}}, et al. "Skull stripping with purely synthetic data." \textit{arXiv preprint arXiv:2505.07159}, 2025.}
+        \resumeItem{[2] S. You, S. Adap, \textbf{\textbf{S. Thakur}}, et al. "Biochemical Prostate Cancer Recurrence Prediction: Thinking Fast \& Slow." \textit{arXiv preprint arXiv:2409.02284}, 2024.}
+        \resumeItem{[3] S. Bakas, \textbf{S.P. Thakur}, S. Faghani, et al. "Brats-path challenge: Assessing heterogeneous histopathologic brain tumor sub-regions." \textit{arXiv preprint arXiv:2405.10871}, 2024.}
+        \resumeItem{[4] U. Baid, S. Pati, et al. (incl. \textbf{S.P. Thakur}). "Federated learning for the classification of tumor infiltrating lymphocytes." \textit{arXiv preprint arXiv:2203.16622}, 2022.}
+        \resumeItem{[5] S. Pati, \textbf{S.P. Thakur}, et al. "Gandlf: A generally nuanced deep learning framework for scalable end-to-end clinical workflows in medical imaging." \textit{arXiv preprint arXiv:2103.01006}, 2021.}
+        \resumeItem{[6] S. Bakas, M. Reyes, et al. (incl. \textbf{\textbf{S. Thakur}}). "Identifying the best machine learning algorithms for brain tumor segmentation in the BRATS challenge." \textit{arXiv preprint arXiv:1811.02629}, 2018.}
+      \resumeItemListEnd
+
+    \item\small{\textbf{Abstracts}}
+      \resumeItemListStart
+        \resumeItem{[1] \textbf{\textbf{S. Thakur}}, U. Baid, et al. "AI-based robust testicular cancer triaging, a promise for an efficient and cost-effective diagnostic/predictive modality." \textit{Cancer Research}, 2025.}
+        \resumeItem{[2] \textbf{\textbf{S. Thakur}}, S. Faghani, M. Moassefi, et al. "TMIC-60. BRATS-PATH: Assessing heterogeneous histopathologic regions in glioblastoma." \textit{Neuro-Oncology}, 2024.}
+        \resumeItem{[3] B. Baheti, \textbf{\textbf{S. Thakur}}, S. Pati, et al. "NIMG-25. Optimization of artificial intelligence algorithms for low-resource/clinical environments" \textit{Neuro-Oncology}, 2022.}
+        \resumeItem{[4] U. Baid, S. Pati, \textbf{\textbf{S. Thakur}}, et al. "The federated tumor segmentation (fets) initiative: The first real-world large-scale data-private collaboration" \textit{Neuro-Oncology}, 2021.}
+        \resumeItem{[5] S. Pati, V. Sharma, et al. (incl. \textbf{\textbf{S. Thakur}}). "Tmod-09. Glioblastoma biophysical growth estimation using deep learning-based regression." \textit{Neuro-Oncology}, 2020.}
+        \resumeItem{[6] \textbf{\textbf{S. Thakur}}, J. Doshi, et al. "NIMG-40. Robust modality-agnostic skull-stripping in presence of diffuse glioma: a multi-institutional study." \textit{Neuro-Oncology}, 2019.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%----------- REVIEWER -----------
+%----------- AWARDS & ACHIEVEMENTS -----------
+\section{Awards \& Achievements}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \resumeItem{\textbf{Brain Tumor Segmentation (BraTS) Challenge 2018:} Secured 3rd position among 390 global research labs in Survival Prediction of brain tumors at the MICCAI 2018 conference.}
+    \resumeItem{\textbf{Structured Data Generation with Unstructured Data with Language Models}, Awared a \$200,000 grant from National Cancer Institute for research in Lanuage Models in healthcare. }
+  \resumeSubHeadingListEnd
+
+\section{Invited Talks and Oral Presentation}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \resumeItem{\textbf{ECDP2025, Barcelona, Spain:} for ``AI as a triaging modality for Testicular Cancer diagnosis" and ``Structured Report Generation from Unstructured Data.''}
+    \resumeItem{\textbf{SNO2024, Texas, USA:} for ``Assessing Hetergenous Landscape of Glioblastoma with AI''}
+    \resumeItem{\textbf{ECDP2022, Berlin, Germany:} for ``Optimization of Deep Learning Models for Whole Slide Images''}
+    \resumeItem{\textbf{MICCAI2019, Shenzhen, China:} for Brain Lesion Workshop for ``Skull-stripping of glioblastoma MRI scans using 3D deep learning''}
+    \resumeItem{\textbf{WCVA2018, Hyderabad, India:} for ``Pose estimation for distracted driver detection using deep convolutional neural networks''}
+  \resumeSubHeadingListEnd
+
+%----------- SKILLS -----------
+
+\section{Skills}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Languages:}{ Python} \\ \vspace{3pt}
+        \textbf{Frameworks \& Tools:}{ PyTorch, Lightning, OpenVINO, TensorRT, Docker, Scikit-learn, Langchain, DICOM, Git} \\ \vspace{3pt}
+        \textbf{Research Interests:}{ Multi-modal Medical Image Analysis, Large Language Models, Whole Slide Image Analysis, Radiology Imaging, Deep Learning, Low-Resource Optimization} \\ \vspace{3pt}
+    }}
+  \resumeSubHeadingListEnd
+
+\section{Reviewer Activities}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \resumeItem{\textit{Nature Communications Medicine}, \textit{BrainLes Workshop (MICCAI)}, \textit{Frontiers in Computational Neurosciences}, \textit{Frontiers in NeuroScience}, \textit{Frontiers in Medicine}, \textit{IET Image Processing}, MedIA, CVPR, Nature Scientific Reports, Nature Digital Medicine}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

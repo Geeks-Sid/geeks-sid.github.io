@@ -1,0 +1,102 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+%\usepackage{marvosym}
+\usepackage{expl3}
+\usepackage{ragged2e}
+\usepackage{url}
+%\usepackage{xunicode,xltxtra,url,parskip}
+% moderncv themes
+\moderncvstyle{banking}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Siddhesh}{Thakur}
+\title{Data Engineer}                               % optional, remove / comment the line if not wanted
+\address{Indianapolis, Indiana, USA} % optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+%\phone[fixed]{(+91)~9922553380}                   % optional, remove / comment the line if not wanted
+
+\phone{+1-267-881-8051}
+
+%\phone[fixed/mobile]{+2~(345)~678~901}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+
+\email{siddhesh0011@gmail.com}                               % optional, remove / comment the line if not wanted
+\homepage{geeks-sid.github.io}                         % optional, remove / comment the line if not wanted
+\extrainfo{https://www.linkedin.com/in/siddheshthakur04/}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+
+%\quote{PhD Status: Project work done - Writing Thesis - To be submitted by April $15^{th}$ 2019}                                 % optional, remove / comment the line if not wanted
+
+
+%\AfterPreamble{\hypersetup{
+%		pdfauthor={Prasanna Porwal},
+%		pdftitle={CV for Prasanna Porwal},
+%		pdfsubject={Detailed CV for Prasanna Porwal},
+%		urlcolor=blue,
+%}}
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+%\section{\textbf{Objective}}
+%\cvitem{}{To work in a challenging environment with a prestigious organization with all my skills and efforts to explore and adapt myself in different fields where I get the opportunity fir continuous learning. }
+
+\input{summary}
+
+\input{interests}
+
+\input{programming}
+
+\input{education}
+
+\input{experience}
+
+\input{accomplishments}
+
+\input{journals}
+
+\input{conference}
+
+\input{preprints}
+
+\input{abstracts}
+
+\input{reviewer}
+
+\section{\textbf{Undertaking}}
+\cvitem{}{The above information is correct to the best of my knowledge.}
+\vspace{2.5cm}
+\cvitem{Date}{\today}
+\cvitemwithcomment{Place}{Philadelphia, PA, USA}{Siddhesh Thakur}
+\end{document}

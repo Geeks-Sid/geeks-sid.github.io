@@ -26,10 +26,15 @@ export const getPosts = (): Post[] => {
   }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 };
 
-const Blog: React.FC = () => {
+interface BlogProps {
+  isSection?: boolean;
+}
+
+const Blog: React.FC<BlogProps> = ({ isSection = false }) => {
   useSEO({
     title: 'sid@blog:~',
-    description: 'Siddhesh Thakur\'s personal blog on AI, research, and engineering.'
+    description: 'Siddhesh Thakur\'s personal blog on AI, research, and engineering.',
+    disabled: isSection
   });
   const posts = useMemo(() => getPosts(), []);
 
